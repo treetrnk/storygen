@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app='storygenApp'>
   <head>
     <title></title>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
@@ -8,9 +8,24 @@
     <script src="js/main.js"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css" />
   </head>
-  <body>
-
+  <body ng-controller="storygen as sg">
     
+    <h1 class="header">storygen</h1>
+
+    <div class="story">
+      <input type="button" value="-" ng-click="sg.minus()" />
+      <input type="text" value="9" size="1" />
+      <input type="button" value="+" ng-click="sg.plus()" /><br /><br />
+      <input type="submit" value="new story" />
+    </div>
+    <br />
+    <br />
+
+
+    <div class="story">
+      <!--- dice go here --->
+      <img class="die" src="icons/flame.png" />
+    </div> 
 
   </body>
 </html>
