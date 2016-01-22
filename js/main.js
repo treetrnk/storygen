@@ -2,10 +2,9 @@ angular.module('storygenApp', [])
   .controller('storygenCon', function() {
     var storygen = this;
     storygen.number = 9;
-    storygen.dice = [];
+    storygen.icons = {};
 
-
-    storygen.icons = [
+    storygen.iconlist = [
       'abstract-001.png',
       'abstract-002.png',
       'abstract-003.png',
@@ -2016,11 +2015,29 @@ angular.module('storygenApp', [])
       'zigzag-cage.png',
       'zigzag-leaf.png',
       'zigzag-tune.png'
-    ]
+    ];
 
     //FUNCTIONS
-    
+  
+    storygen.regen = function(index) {
+      if (index != null) {
+        var n = 0;
+        while (n < storygen.number) {
+          n += 1;
+          // GENERATE PATH AND COLOR HERE
+          storygen.icons.push({'path':path, 'color':color}); 
+        };
+      }else{
 
+      }
+    };  
 
+    storygen.plus = function() {
+
+    };
+
+    storygen.minus = function() {
+
+    };
 
   });

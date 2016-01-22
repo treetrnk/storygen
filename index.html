@@ -14,17 +14,17 @@
 
     <div class="story">
       <input type="button" value="-" ng-click="sg.minus()" />
-      <input type="text" value="9" size="1" />
+      <input type="text" value="{{sg.number}}" size="1" />
       <input type="button" value="+" ng-click="sg.plus()" /><br /><br />
-      <input type="submit" value="new story" />
+      <input type="submit" value="new story" ng-click="sg.regen()" />
     </div>
     <br />
     <br />
 
 
-    <div class="story">
-      <!--- dice go here --->
-      <img class="die" src="icons/flame.png" />
+    <div class="story" ng-repeat="icon in sg.icons">
+      <img class="icon" src="{{icon.path}}" 
+        style="background: #{{icon.color}};" ng-click="sg.regen(index)" />
     </div> 
 
   </body>
