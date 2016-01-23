@@ -2,7 +2,7 @@ angular.module('storygenApp', [])
   .controller('storygenCon', function() {
     var storygen = this;
     storygen.number = 9;
-    storygen.icons = {};
+    storygen.icons = [];
 
     storygen.iconlist = [
       'abstract-001.png',
@@ -2017,27 +2017,57 @@ angular.module('storygenApp', [])
       'zigzag-tune.png'
     ];
 
+    storygen.colors = [
+      "#ffff54",
+      "#8cd446",
+      "#46acd3",
+      "#4264c7",
+      "#8c3fc0",
+      "#e64c8d",
+      "#ff5454",
+      "#ffb554",
+      "#ffb554",
+    ];
+
     //FUNCTIONS
   
     storygen.regen = function(index) {
-      if (index != null) {
+      if (storygen.number > 99) {
+        storygen.number = 99;
+      };
+      if (index == "all") {
+        storygen.icons = [];
         var n = 0;
         while (n < storygen.number) {
           n += 1;
-          // GENERATE PATH AND COLOR HERE
+          var path = storygen.iconlist[Math.floor(Math.random() * (storygen.iconlist.length - 1))];
+          path = "icons/" + path;
+          var color = storygen.colors[Math.floor(Math.random() * (storygen.colors.length - 1))];
+          // GENERATE COLOR HERE
           storygen.icons.push({'path':path, 'color':color}); 
         };
       }else{
-
-      }
+        var path = storygen.iconlist[Math.floor(Math.random() * (storygen.iconlist.length - 1))];
+        path = "icons/" + path;
+        var color = storygen.colors[Math.floor(Math.random() * (storygen.colors.length - 1))];
+        storygen.icons[index] = {'path':path, 'color':color}; 
+      };
     };  
 
     storygen.plus = function() {
-
+      if (storygen.number < 99) {
+        storygen.number++;
+        storygen.regen("all");
+      };
     };
 
     storygen.minus = function() {
-
+      if (storygen.number > 0) {
+        storygen.number -= 1;
+        storygen.regen("all");
+      };
     };
+
+    storygen.regen('all');
 
   });

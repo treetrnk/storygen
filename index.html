@@ -8,23 +8,28 @@
     <script src="js/main.js"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css" />
   </head>
-  <body ng-controller="storygen as sg">
+  <body ng-controller="storygenCon as sg">
     
-    <h1 class="header">storygen</h1>
+    <h1 class="header">&nbsp;&nbsp; storygen</h1>
 
     <div class="story">
-      <input type="button" value="-" ng-click="sg.minus()" />
-      <input type="text" value="{{sg.number}}" size="1" />
-      <input type="button" value="+" ng-click="sg.plus()" /><br /><br />
-      <input type="submit" value="new story" ng-click="sg.regen()" />
+      <form ng-submit="sg.regen('all')">
+        <input type="button" value="-" ng-click="sg.minus()" />
+        <input type="text" value="{{sg.number}}" size="1" 
+          ng-model="sg.number" />
+        <input type="button" value="+" ng-click="sg.plus()" /><br /><br />
+        <input type="submit" value="new story" />
+      </form>
     </div>
     <br />
     <br />
 
 
-    <div class="story" ng-repeat="icon in sg.icons">
+    <div class="story">
       <img class="icon" src="{{icon.path}}" 
-        style="background: #{{icon.color}};" ng-click="sg.regen(index)" />
+        style="background: {{icon.color}};" ng-click="sg.regen($index)" 
+        ng-repeat="icon in sg.icons" />
+      <br /><br />
     </div> 
 
   </body>

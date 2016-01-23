@@ -5,7 +5,6 @@ html, body {
   background: #ccc;
   height: 100%;
   width: 100%;
-  overflow: hidden;
 }
 
 .header {
@@ -14,12 +13,12 @@ html, body {
   background: #333;
   line-height: 100px;
   padding: 0px;
-  padding-left: 10px;
   margin-top: 0px;
+  overflow-y: hidden;
 }
 
 .story {
-  max-width: 600px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -30,5 +29,5 @@ html, body {
   border: 3px solid #000;
   border-radius: 5px;
   cursor: pointer;
-  background: #ffe11a;
+  margin: 2px;
 }
