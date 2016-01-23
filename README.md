@@ -2,7 +2,9 @@
 
 ## purpose
 This project was created to be used for creative story telling. It is meant to 
-be an online, accessible version of story dice.
+be an online, accessible version of story dice. The icons were taken from 
+[game-icons.net](http://game-icons.net) and are available under the 
+[Creative Commons 3.0](http://creativecommons.org/licenses/by/3.0/) license.
 
 ## usage
 You can change the amount of icons shown with the plus and minus buttons as 
