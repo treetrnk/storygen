@@ -13,8 +13,8 @@ the icons, and click on an icon to regenerate just that icon.
 ## screenshot
 ![screenshot](screenshot.png) 
 
-#### Commands to generate icon list
+### note to self
+Command to generate icon list:
 ```
-cd icons/
 printf "%s\',\n\'" * > ../js/icons.js 
 ```
