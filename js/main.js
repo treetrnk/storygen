@@ -2032,8 +2032,10 @@ angular.module('storygenApp', [])
     //FUNCTIONS
   
     storygen.regen = function(index) {
-      if (storygen.number > 99) {
-        storygen.number = 99;
+      if (storygen.number > 36) {
+        storygen.number = 36;
+      } else if (storygen.number < 1) {
+        storygen.number = 1;
       };
       if (index == "all") {
         storygen.icons = [];
