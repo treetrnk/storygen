@@ -10,9 +10,9 @@
   </head>
   <body ng-controller="storygenCon as sg">
     
-    <h1 class="header">&nbsp;&nbsp; storygen</h1>
 
     <div class="story">
+      <h1 class="header">storygen</h1>
       <form ng-submit="sg.regen('all')">
         <input type="button" value="-" ng-click="sg.minus()" />
         <input type="text" value="{{sg.number}}" size="1" 
@@ -21,7 +21,6 @@
         <input type="submit" value="new story" />
       </form>
     </div>
-    <br />
     <br />
 
 
