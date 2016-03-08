@@ -4,16 +4,27 @@
     <title></title>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-    <script src="../js/main.js"></script>
+
+    <!---<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>--->
+    <script src="../js/angular.min.js"></script>
+    <!---<script src="http://code.jquery.com/jquery-1.12.1.min.js"></script>--->
+    <script src="../js/jquery-1.12.1.min.js"></script>
+    
     <script src="js/main.js"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../css/header.css" />
+    <script>
+      $(function() {
+        $('#header').load('../header.html');
+      });
+    </script>
   </head>
   <body ng-controller="storygenCon as sg">
     
+    <div id="header"></div>
 
     <div class="story">
-      <h1 class="header">storygen</h1>
+      <h1>storygen</h1>
       <form ng-submit="sg.regen('all')">
         <input type="button" value="&#8210;" ng-click="sg.minus()" />
         <input type="text" value="{{sg.number}}" size="1" 
