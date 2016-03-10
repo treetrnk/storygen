@@ -28,6 +28,8 @@
 
     <div class="story">
       <h1>storygen</h1>
+      <p>Use the randomly generated images below<br /> as inspiration for your story.</p>
+      <br />
       <form ng-submit="sg.regen('all')">
         <input type="button" value="&#8210;" ng-click="sg.minus()" />
         <input type="text" value="{{sg.number}}" size="1" 
@@ -35,53 +37,50 @@
         <input type="button" value="+" ng-click="sg.plus()" /><br /><br />
         <input type="submit" value="new story" />
       </form>
-    </div>
-    <br />
-
-
-    <div class="story">
+      <br /><br />
       <img class="icon" src="{{icon.path}}" 
         style="background: {{icon.color}};" ng-click="sg.regen($index)" 
         ng-repeat="icon in sg.icons" />
-      <br /><br />
-      <br />
-      <p>
+    </div>
+    <br /><br />
+
+
+    <div class="footer">
       This website uses icons available at 
       <a href="http://game-icons.net" target="_blank">Game-Icons.net</a>.
       The icons were made by: 
-        <a href="http://lorcblog.blogspot.com" target="_blank">
-         Lorc</a>,
-        <a href="http://delapouite.com" target="_blank">
-          Delapouite</a>,
-        <a href="http://ninmunanmu.com" target="_blank">
-          John Colburn</a>,
-        <a href="http://blackdogofdoom.blogspot.co.uk" target="_blank">
-          Felbrigg</a>,
-        <a href="http://www.uniquedicetowers.com" target="_blank">
-          John Redman</a>,
-        <a href="https://twitter.com/unstoppableCarl" target="_blank">
-          Carl Olsen</a>,
-        <a href="http://opengameart.org/content/95-game-icons" target="_blank">
-          sbed</a>,
-        <a href="http://forum.game-icons.net" target="_blank">
-          PriorBlue</a>,
-        <a href="http://wjbstories.blogspot.com" target="_blank">
-          Willdabeast</a>,
-        <a href="http://viscious-speed.deviantart.com" target="_blank">
-          Viscious Speed</a>,
-        <a href="http://berandas.deviantart.com" target="_blank">
-          Lord Berandas</a>,
-        <a href="http://ecesisllc.wix.com/home" target="_blank">
-          Irongamer</a>,
-        <a href=http://www.gnomosygoblins.blogspot.com" target="_blank">
-          HeavenlyDog</a>,
-        <a href="http://forum.game-icons.net" target="_blank">
-          Lucas</a>,
-        <a href="http://www.faithtoken.com" target="_blank">
-          Faithtoken</a>, and
-        <a href="https://commons.wikimedia.org" target="_blank">
-          Various artists</a>.
-      </p>
+      <a href="http://lorcblog.blogspot.com" target="_blank">
+       Lorc</a>,
+      <a href="http://delapouite.com" target="_blank">
+        Delapouite</a>,
+      <a href="http://ninmunanmu.com" target="_blank">
+        John Colburn</a>,
+      <a href="http://blackdogofdoom.blogspot.co.uk" target="_blank">
+        Felbrigg</a>,
+      <a href="http://www.uniquedicetowers.com" target="_blank">
+        John Redman</a>,
+      <a href="https://twitter.com/unstoppableCarl" target="_blank">
+        Carl Olsen</a>,
+      <a href="http://opengameart.org/content/95-game-icons" target="_blank">
+        sbed</a>,
+      <a href="http://forum.game-icons.net" target="_blank">
+        PriorBlue</a>,
+      <a href="http://wjbstories.blogspot.com" target="_blank">
+        Willdabeast</a>,
+      <a href="http://viscious-speed.deviantart.com" target="_blank">
+        Viscious Speed</a>,
+      <a href="http://berandas.deviantart.com" target="_blank">
+        Lord Berandas</a>,
+      <a href="http://ecesisllc.wix.com/home" target="_blank">
+        Irongamer</a>,
+      <a href=http://www.gnomosygoblins.blogspot.com" target="_blank">
+        HeavenlyDog</a>,
+      <a href="http://forum.game-icons.net" target="_blank">
+        Lucas</a>,
+      <a href="http://www.faithtoken.com" target="_blank">
+        Faithtoken</a>, and
+      <a href="https://commons.wikimedia.org" target="_blank">
+        Various artists</a>.
     </div> 
 
   </body>
