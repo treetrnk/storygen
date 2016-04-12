@@ -11,8 +11,30 @@ html {
   text-align: center;
 }
 
-.story p {
-  font-size: 10pt;
+#help {
+  background: #777;
+  color: #ccc;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 100px;
+  width: 25px;
+  line-height: 25px;
+  font-size: 12pt;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+}
+
+#help-text {
+  max-width:250px;
+  margin-right:auto;
+  margin-left:auto;
+  font-size:10pt;
+  text-align: left;
+  background: #eee;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 .footer {
@@ -26,6 +48,7 @@ html {
 
 h1 {
   line-height: 30px;
+  display: inline-block;
 }
 
 a {

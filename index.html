@@ -28,7 +28,18 @@
 
     <div class="story">
       <h1>storygen</h1>
-      <p>Use the randomly generated images below<br /> as inspiration for your story. Click on an image to reroll that image.</p>
+      <p id="help" ng-click="sg.toggleHelp()">?</p>
+      <div id="help-text" ng-hide="sg.help">
+        <ul>
+          <li>
+            Use the randomly generated images below as inspiration for your story.
+          </li>
+          <li>
+            Click on an image to reroll that image.
+          </li>
+        </ul>
+      </div>
+      <br />
       <br />
       <form ng-submit="sg.regen('all')">
         <input type="button" value="&#8210;" ng-click="sg.minus()" />

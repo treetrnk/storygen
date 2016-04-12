@@ -3,6 +3,7 @@ angular.module('storygenApp', [])
     var storygen = this;
     storygen.number = 9;
     storygen.icons = [];
+    storygen.help = true;
 
     storygen.iconlist = [
       'abstract-001.png',
@@ -2067,6 +2068,19 @@ angular.module('storygenApp', [])
       if (storygen.number > 0) {
         storygen.number -= 1;
         storygen.regen("all");
+      };
+    };
+
+    storygen.toggleHelp = function() {
+      console.log("Toggle Help");
+      if (storygen.help == false) {
+        console.log("Hide help was FALSE");
+        storygen.help = true;
+        console.log(storygen.help);
+      } else {
+        console.log("Hide help was TRUE");
+        storygen.help = false;
+        console.log(storygen.help);
       };
     };
 
