@@ -2072,15 +2072,10 @@ angular.module('storygenApp', [])
     };
 
     storygen.toggleHelp = function() {
-      console.log("Toggle Help");
       if (storygen.help == false) {
-        console.log("Hide help was FALSE");
         storygen.help = true;
-        console.log(storygen.help);
       } else {
-        console.log("Hide help was TRUE");
         storygen.help = false;
-        console.log(storygen.help);
       };
     };
 
