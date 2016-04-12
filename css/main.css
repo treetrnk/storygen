@@ -46,7 +46,7 @@ html {
   color: #888;
 }
 
-h1 {
+.story h1 {
   line-height: 30px;
   display: inline-block;
 }
