@@ -1088,7 +1088,6 @@ angular.module('storygenApp', [])
       'level-two.png',
       'lever.png',
       'libra.png',
-      'license.txt',
       'life-buoy.png',
       'life-in-the-balance.png',
       'life-support.png',
