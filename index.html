@@ -7,9 +7,12 @@
     <meta content='width=device-width, initial-scale=1' name='viewport'/>
 
     <!---<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>--->
-    <script src="../js/angular.min.js"></script>
     <!---<script src="http://code.jquery.com/jquery-1.12.1.min.js"></script>--->
-    <script src="../js/jquery-1.12.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+    <script src="../js/jquery-3.0.0.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="../js/angular.min.js"></script>
+    <script type="text/javascript" src="js/sortable.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' 
       rel='stylesheet' type='text/css'>
     
@@ -17,6 +20,15 @@
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <link rel="stylesheet" type="text/css" href="../css/header.css" />
     <script>
+      
+      /*  UNCOMMENT FOR DRAG AND DROP
+            drag and drob and clicking don't work well together currently
+      $(function() {
+        $( "#sortable" ).sortable();
+        $( "#sortable" ).disableSelection();
+      });
+      */
+
       $(function() {
         $('#header').load('../header.html');
       });
@@ -51,9 +63,13 @@
         <input type="submit" value="new story" />
       </form>
       <br /><br />
-      <img class="icon" src="{{icon.path}}" 
-        style="background: {{icon.color}};" ng-click="sg.regen($index)" 
-        ng-repeat="icon in sg.icons" />
+      
+      <span ng-model="sg.icons" id="sortable">
+        <img ng-repeat="icon in sg.icons" class="icon" src="{{icon.path}}" 
+          style="background: {{icon.color}};" ng-click="sg.regen($index)" 
+          />
+      </span>
+
     </div>
     <br /><br />
 
@@ -86,7 +102,7 @@
         Lord Berandas</a>,
       <a href="http://ecesisllc.wix.com/home" target="_blank">
         Irongamer</a>,
-      <a href=http://www.gnomosygoblins.blogspot.com" target="_blank">
+      <a href="http://www.gnomosygoblins.blogspot.com" target="_blank">
         HeavenlyDog</a>,
       <a href="http://forum.game-icons.net" target="_blank">
         Lucas</a>,

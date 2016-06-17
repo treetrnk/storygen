@@ -1,6 +1,7 @@
 angular.module('storygenApp', [])
   .controller('storygenCon', function() {
     var storygen = this;
+    var myAppModule = angular.module('MyApp', ['ui.sortable'])
     storygen.number = 9;
     storygen.icons = [];
     storygen.help = true;
@@ -2032,8 +2033,8 @@ angular.module('storygenApp', [])
     //FUNCTIONS
   
     storygen.regen = function(index) {
-      if (storygen.number > 36) {
-        storygen.number = 36;
+      if (storygen.number > 18) {
+        storygen.number = 18;
       } else if (storygen.number < 1) {
         storygen.number = 1;
       };
@@ -2049,10 +2050,15 @@ angular.module('storygenApp', [])
           storygen.icons.push({'path':path, 'color':color}); 
         };
       }else{
-        var path = storygen.iconlist[Math.floor(Math.random() * (storygen.iconlist.length - 1))];
-        path = "icons/" + path;
-        var color = storygen.colors[Math.floor(Math.random() * (storygen.colors.length - 1))];
-        storygen.icons[index] = {'path':path, 'color':color}; 
+        // REGENERATE INDIVIDUAL IMAGES
+        if (angular.element(index).hasClass("ui-sortable-helper")) {
+          console.log("Do nothing!"); // DO NOTHING IF THE IMAGE IS BEING DRAGGED ...theoretically
+        }else{
+          var path = storygen.iconlist[Math.floor(Math.random() * (storygen.iconlist.length - 1))];
+          path = "icons/" + path;
+          var color = storygen.colors[Math.floor(Math.random() * (storygen.colors.length - 1))];
+          storygen.icons[index] = {'path':path, 'color':color}; 
+        };
       };
     };  
 
