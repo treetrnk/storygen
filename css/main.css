@@ -2,6 +2,10 @@ html {
   font-family: proxima-nova,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+body {
+  padding-top: 50px;
+}
+
 .story {
   max-width: 800px;
   min-width: 300px;

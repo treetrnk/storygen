@@ -2,7 +2,7 @@ angular.module('storygenApp', [])
   .controller('storygenCon', function() {
     var storygen = this;
     var myAppModule = angular.module('MyApp', ['ui.sortable'])
-    storygen.number = 9;
+    storygen.number = 10;
     storygen.icons = [];
     storygen.help = true;
 
@@ -2033,8 +2033,8 @@ angular.module('storygenApp', [])
     //FUNCTIONS
   
     storygen.regen = function(index) {
-      if (storygen.number > 18) {
-        storygen.number = 18;
+      if (storygen.number > 20) {
+        storygen.number = 20;
       } else if (storygen.number < 1) {
         storygen.number = 1;
       };
